@@ -1,0 +1,276 @@
+@font-face {
+    font-family: "Chakra Petch", sans-serif;;
+    src: url(https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap);
+}
+
+*{
+    color: #eeeeee;
+    font-family: Chakra Petch;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    background-color: #31363F;
+}
+
+.sidebar{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #222831;
+}
+
+h1{
+    text-align: center;
+}
+
+footer{
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100px;
+    margin-top: auto;
+    transition: .5s;
+    font-size: 30px;
+}
+
+img{
+    width: 50px;
+    margin-left: 15px;
+    height: 50px;
+    transition: 1s;
+}
+
+img:hover{
+    transform: rotate(360deg);
+}
+
+a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-size: 0;
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+.sidebar button{
+    background-color: transparent;
+    text-align: left;
+    padding-left: 75px;
+    font-size: 20px;
+    height: 75px;
+    border: none;
+    transition: .5s;
+}
+
+.sidebar button:hover, footer:hover{
+    background-color: #222831;
+    cursor: pointer;
+}
+
+#addBook{
+    margin-top: 75px;
+}
+
+.library{
+    display: flex;
+    max-width: 100%;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    overflow: auto;
+    padding: 20px;
+    justify-content: center;
+}
+
+#bookTitle{
+    word-break: break-all;
+}
+
+.books{
+    background-color: #222831;
+    box-sizing: border-box;
+    min-width: 350px;
+    max-width: 1300px;
+    min-height: 400px;
+    max-height: 450px;
+    border-radius: 15px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    gap: 20px;
+    padding: 20px;
+}
+
+#bookRead{
+    width: 200px;
+    height: 50px;
+    background-color: #013220;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    transition: .5s;
+}
+
+#bookRead:hover{
+    background-color: #222831;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+#delete{
+    width: 200px;
+    height: 50px;
+    background-color: #76ABAE;
+    color: #222831;
+    border: none;
+    border-radius: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    transition: .5s;
+}
+
+#delete:hover{
+    background-color: #31363F;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    box-sizing: border-box;
+    border-left: 1px solid black;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #555;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #222831;
+}
+
+#bookInfo{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    background-color: #222831;
+    box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
+    border-radius: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkbox{
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+}
+
+#readit{
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+}
+
+.holder{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+input{
+    background-color: #31363F;
+    border-radius: 3px;
+    width: 300px;
+    height: 25px;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+
+label{
+    font-size: 20px;
+}
+
+.readBtn{
+    width: 300px;
+    height: 30px;
+}
+
+.btns{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    gap: 4px;
+}
+
+input[type="checkbox"]{
+    accent-color: #76ABAE;
+}
+
+.btns button{
+    width: 148px;
+    height: 50px;
+}
+
+#no{
+    background-color: #eeeeee;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #222831;
+    font-weight: bold;
+    font-size: 20px;
+    transition: .5s;
+}
+
+#yes{
+    background-color: #76ABAE;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    transition: .5s;
+}
+
+#yes:hover, #no:hover{
+    background-color: #31363F;
+    cursor: pointer;
+}
