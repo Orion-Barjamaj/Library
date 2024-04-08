@@ -79,6 +79,8 @@ a:hover{
 
 .sidebar button:hover, footer:hover{
     background-color: #222831;
+    border-radius: 15px;
+    padding: 10px;
     cursor: pointer;
 }
 
