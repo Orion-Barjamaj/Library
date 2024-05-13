@@ -29,15 +29,15 @@
             <form>
                 <div class="holder">
                     <label for="title">Title</label>
-                    <input id="title" type="text" name="title" required>
+                    <input id="title" type="text" name="title" minlength="1" required>
                 </div>
                 <div class="holder">
                     <label for="author">Author</label>
-                    <input id="author" type="text" name="author" required>
+                    <input id="author" type="text" name="author" minlength="1" required>
                 </div>
                 <div class="holder">
                     <label for="pages">Number Of Pages</label>
-                    <input id="pages" type="number" name="pages" min="0" required>
+                    <input id="pages" type="number" name="pages" min="1" required>
                 </div>
                 <div class="holder checkbox">
                     <label for="readit">Have you read the book?</label>
@@ -45,7 +45,7 @@
                 </div>
                 <div class="btns">
                     <button id="no">Nevermind</button>
-                    <button type="submit" id="yes">Add</button>
+                    <button id="yes">Add</button>
                 </div>
             </form>
         </div>

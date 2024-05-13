@@ -69,13 +69,51 @@ class addBookToLibrary{
     }
 }
 
+let titleBool = false;
+let authorBool = false;
+let pageBool = false;
+
+title.addEventListener('input', (event) => {
+    if(title.validity.tooShort){
+        title.setCustomValidity('Your Title Should Be More Than One Character Long!');
+    }else {
+        title.setCustomValidity('');
+        titleBool = true;
+    }
+    title.reportValidity();
+});
+
+author.addEventListener('input', (event) => {
+    if(author.validity.tooShort){
+        author.setCustomValidity('Your Author Name Should Be More Than One Character Long!');
+    }else {
+        title.setCustomValidity('');
+        authorBool = true;
+    }
+    author.reportValidity();
+});
+
+pages.addEventListener('input', (event) => {
+    if(pages.validity.rangeUnderflow){
+        pages.setCustomValidity('Your Pages Should Be More Than 0!');
+    }else {
+        title.setCustomValidity('');
+        pageBool = true;
+    }
+    pages.reportValidity();
+});
+
+
 add.addEventListener("click", (e) => {
-    let book = new addBookToLibrary();
-    e.preventDefault();
-    info.style.display = "none";
+    if(titleBool && authorBool && pageBool){
+        e.preventDefault();
+        let book = new addBookToLibrary();
+        info.style.display = "none";
+        titleBool = false; authorBool = false; pageBool = false;
+    }
 });
 
 nevermind.addEventListener("click", (e) => {
-    info.style.display = "none";
     e.preventDefault();
+    info.style.display = "none";
 });
